@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Banking App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h2>Login to Account</h2>
+            <h4>Name: Fizza, Pin: 1234 or Name: Asma, Pin: 5678</h4>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="pin_number">PIN (4 digits):</label>
+                    <input type="password" id="pin_number" name="pin_number" maxlength="4" pattern="[0-9]{4}" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <div id="message" class="message-container"></div>
+        </div>
+    </div>
+    <script src="script-login.js"></script>
+</body>
+</html>

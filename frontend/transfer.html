@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Money - Banking App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h2>Transfer Money</h2>
+            <form id="transferForm">
+                <div class="form-group">
+                    <label for="senderName">Sender Name:</label>
+                    <input type="text" id="senderName" name="sender_name" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="recepientName">Recipient Name:</label>
+                    <input type="text" id="recepientName" name="recepient_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="amount">Amount:</label>
+                    <input type="number" id="amount" name="amount" step="0.01" min="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="pin_number">PIN (4 digits):</label>
+                    <input type="password" id="pin_number" name="pin_number" maxlength="4" pattern="[0-9]{4}" required>
+                </div>
+                <button type="submit" class="btn">Transfer</button>
+            </form>
+            <button id="backToDashboardBtn" class="btn btn-secondary">Back to Dashboard</button>
+            <div id="message" class="message-container"></div>
+            <div id="transferResult" class="message-container success-message" style="display:none;">
+                <h3>Transfer Successful!</h3>
+                <p>Sender New Balance: $<span id="senderNewBalance"></span></p>
+                <p>Recipient New Balance: $<span id="recepientNewBalance"></span></p>
+            </div>
+        </div>
+    </div>
+    <script src="script-transfer.js"></script>
+</body>
+</html>
