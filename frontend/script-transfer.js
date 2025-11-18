@@ -1,4 +1,4 @@
-const API_BASE_URL = window.API_BASE_URL;
+const API_BASE_URL = "https://class-6-homework-production.up.railway.app";
 
 document.addEventListener('DOMContentLoaded', () => {
     const transferForm = document.getElementById('transferForm');
